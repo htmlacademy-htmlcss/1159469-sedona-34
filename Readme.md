@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Артём Якимов](https://up.htmlacademy.ru/htmlcss/34/user/1159469).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Григорьев] (https://htmlacademy.ru/profile/fuckhtml)
 
 ---
 
