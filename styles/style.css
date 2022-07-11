@@ -91,6 +91,7 @@ body {
 
 .button:focus {
   background-color:#615048;
+  outline: none;
 }
 
 .button:active {
@@ -111,6 +112,7 @@ body {
 
 .button-second:focus {
   background-color: #68A2CA;
+  outline: none;
 }
 
 .button-second:active {
@@ -131,6 +133,7 @@ body {
 
 .button-selected:focus {
   background-color: #6C9E42;
+  outline: none;
 }
 
 .button-selected:active {
@@ -156,6 +159,7 @@ body {
   border: 3px solid #83B3D3;
   border-radius: 4px;
   background-color: rgba(0, 0, 0, 0);
+  outline: none;
 }
 
 .button-light:active {
@@ -186,6 +190,7 @@ body {
 
 .button-sort:focus {
   border-color: #68A2CA;
+  outline: none;
 }
 
 .button-sort:active {
@@ -307,6 +312,7 @@ body {
 
 .navigation-button:focus {
   background-color: #615048;
+  outline: none;
 }
 
 .navigation-button:active {
@@ -524,6 +530,7 @@ body {
   background-color: #F2F2F2;
   color: #000000;
   border: none;
+  outline: none;
   border-radius: 10px 0 0 10px;
   min-width: 600px;
 }
@@ -592,6 +599,7 @@ body {
 
 .footer-social-link:focus .footer-social-icon {
   fill: #68A2CA;
+  outline: none;
 }
 
 .footer-social-link:active .footer-social-icon {
@@ -618,6 +626,7 @@ body {
 
 .contacts-phone:focus {
   color: #756157;
+  outline: none;
 }
 
 .contacts-phone:active {
@@ -807,6 +816,21 @@ body {
   cursor: pointer;
 }
 
+.select-control:hover,
+.select-control:focus {
+  border-color: #68A2CA;
+  outline: none;
+}
+
+.select-control:active {
+  border-color: #3F5E72;
+}
+
+.select-control:disabled {
+  color: rgba(0, 0, 0, 0.3);
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
 .sorting-view {
   display: flex;
   margin-left: auto;
@@ -952,6 +976,7 @@ body {
 
 .pagination-link:focus {
   background-color: #68A2CA;
+  outline: none;
 }
 
 .pagination-link:active {
