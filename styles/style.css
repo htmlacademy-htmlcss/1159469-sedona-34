@@ -1295,6 +1295,8 @@ body {
   z-index: 1;
 }
 
+/* Скрывает модальное окно */
+
 /* .modal-container-close {
   display: none;
 } */
