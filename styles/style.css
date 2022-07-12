@@ -167,6 +167,7 @@ body {
 .button-light:active {
   opacity: 0.3;
   background-color: rgba(0, 0, 0, 0);
+  outline: none;
 }
 
 .button-sort {
@@ -1279,4 +1280,367 @@ body {
   text-align: center;
   padding-top: 94px;
   padding-bottom: 94px;
+}
+
+/* Modal window */
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(242, 242, 242, 0.8);
+  z-index: 1;
+}
+
+/* .modal-container-close {
+  display: none;
+} */
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 62px 70px 70px 70px;
+  background-color: #FFFFFF;
+  color: #000000;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.modal-search {
+  width: 715px;
+  box-sizing: border-box;
+}
+
+.modal-close-button {
+  position: absolute;
+  width: 53px;
+  height: 53px;
+  top: 54px;
+  right: 70px;
+  background-color: #F2F2F2;
+  border-radius: 50%;
+  border: none;
+}
+
+.modal-close-cross {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  width: 13px;
+  height: 13px;
+  background-image: url(../images/cross.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.modal-close-button:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-close-button:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.modal-close-button:active {
+  background-color: #E6E6E6;
+  outline: none;
+}
+
+.modal-close-button:active .modal-close-cross {
+  opacity: 0.3;
+}
+
+.modal-title {
+  font-family: inherit;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 63px;
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: 288px 230px;
+  gap: 40px 56px;
+}
+
+.field-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  max-width: 100%;
+  position: relative;
+}
+
+.field-group:nth-child(1) {
+  grid-column: span 2;
+  position: relative;
+}
+
+.field-group:nth-child(1)::after {
+  position: absolute;
+  left: 156px;
+  top: 59px;
+  content: "Мы не можем отправить вас в прошлое.";
+  color: #FF5757;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.field-group:nth-child(2) {
+  grid-column: span 2;
+  position: relative;
+}
+
+.field-group:nth-child(2)::after {
+  position: absolute;
+  left: 156px;
+  top: 59px;
+  content: "На эти даты есть свободные номера. Пока есть.";
+  color: #333333;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.search-form-label {
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.field {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 14px 19px;
+  background-color: #F2F2F2;
+  color: #000000;
+  border: none;
+  border-radius: 4px;
+  width: 133px;
+  box-sizing: border-box;
+}
+
+.field:hover {
+  background-color: #E6E6E6;
+}
+
+.field:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.field:active {
+  box-shadow: inset 0 0 0 2px #000000;
+  background-color: #FFFFFF;
+  outline: none;
+}
+
+.field-date {
+  width: 420px;
+  position: relative;
+  padding-right: 53px;
+}
+
+.calendar {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  right: 19px;
+  transform: translateY(-50%);
+  background-image: url(../images/calendar.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.3;
+}
+
+.field-amount::-webkit-outer-spin-button,
+.field-amount::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.field-amount {
+  text-align: center;
+}
+
+.amount-buttons-wrapper {
+  position: relative;
+}
+
+.amount-button {
+  position: absolute;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.decrease-button {
+  width: 25px;
+  height: 25px;
+  top: 50%;
+  left: 19px;
+  transform: translateY(-50%);
+}
+
+.decrease-button-content {
+  position: absolute;
+  width: 13px;
+  height: 1px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.3;
+}
+
+.decrease-button:hover .decrease-button-content {
+  opacity: 1;
+}
+
+.decrease-button:focus {
+  border: 3px solid #83B3D3;
+  border-radius: 4px;
+  outline: none;
+}
+.decrease-button:focus .decrease-button-content {
+  opacity: 1;
+}
+
+.decrease-button:active {
+  border: none;
+  outline: none;
+}
+
+.decrease-button:active .decrease-button-content {
+  opacity: 0.2;
+  border: none;
+  outline: none;
+}
+
+.increase-button {
+  width: 25px;
+  height: 25px;
+  top: 50%;
+  right: 19px;
+  transform: translateY(-50%);
+}
+
+.increase-button-content {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.3;
+}
+
+.increase-button:hover .increase-button-content {
+  opacity: 1;
+}
+
+.increase-button:focus {
+  border: 3px solid #83B3D3;
+  border-radius: 4px;
+  outline: none;
+}
+.increase-button:focus .increase-button-content {
+  opacity: 1;
+}
+
+.increase-button:active {
+  border: none;
+  outline: none;
+}
+
+.increase-button:active .increase-button-content {
+  opacity: 0.2;
+}
+
+.modal-form-button {
+  grid-column: span 2;
+  font-size: 20px;
+  line-height: 36px;
+  border-radius: 10px;
+  padding: 12px 26px;
+}
+
+.modal-form-button:focus {
+  outline: 3px solid #756257;
+}
+
+.modal-form-button:active {
+  outline: none;
+}
+
+.tooltip {
+  position: absolute;
+  top: 14px;
+  left: 54px;
+}
+
+.tooltip-toggle {
+  display: block;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.tooltip-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.tooltip-toggle:hover .tooltip-icon circle {
+  fill: #68A2CA;
+}
+
+.tooltip-text {
+  box-sizing: border-box;
+  width: 256px;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #FFFFFF;
+  background-color: #333333;
+  border-radius: 10px;
+  padding: 15px 18px 18px 22px;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.tooltip-text::after {
+  content: "";
+  width: 19px;
+  height: 9px;
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url(../images/triangle.svg);
+  background-repeat: no-repeat;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
 }
