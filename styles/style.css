@@ -354,8 +354,9 @@ body {
   height: 20px;
   top: 15px;
   left: 24px;
-  background-color: #7DB54F;
+  background-color: #76a64f;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .popover::after {
@@ -1485,17 +1486,54 @@ body {
   padding-right: 53px;
 }
 
-.calendar {
+.calendar-wrapper {
+  position: relative;
+}
+
+.field-button-calendar {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  top: 50%;
+  right: 19px;
+  transform: translateY(-50%);
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.field-button-calendar:hover .calendar-icon {
+  fill: #000000;
+}
+
+.field-button-calendar:focus {
+  border: 3px solid #83B3D3;
+  border-radius: 4px;
+  outline: none;
+}
+
+.field-button-calendar:focus .calendar-icon {
+  fill: #000000;
+}
+
+.field-button-calendar:active {
+  outline: none;
+  border: none;
+}
+
+.field-button-calendar:active .calendar-icon {
+  fill: rgba(0, 0, 0, 0.2);
+}
+
+.calendar-icon {
   position: absolute;
   width: 15px;
   height: 15px;
   top: 50%;
-  right: 19px;
-  transform: translateY(-50%);
-  background-image: url(../images/calendar.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.3;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: rgba(0, 0, 0, 0.3);
 }
 
 .field-amount::-webkit-outer-spin-button,

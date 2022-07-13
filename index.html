@@ -126,7 +126,7 @@
 
         <section class="search-hotel">
           <h2 class="search-hotel-title">Заинтересовались?</h2>
-          <p class="search-hotel-explaining">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <p class="search-hotel-explaining">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне  </p>
           <a class="search-hotel-link button" href="#" >Поиск гостиницы в Седоне</a>
         </section>
 
@@ -134,7 +134,8 @@
           <h2 class="subscription-title">Подпишитесь на рассылку</h2>
           <p class="subscription-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="subscription-mail" type="email" name="subscription-email" placeholder="Ваш e-mail">
+            <label class="visually-hidden" for="subscription-mail">Введите e-mail для подписки</label>
+            <input class="subscription-mail" id="subscription-mail" type="email" name="subscription-email" placeholder="Ваш e-mail">
             <button class="subscription-button button button-second" type="submit">Подписаться</button>
           </form>
         </section>
@@ -203,13 +204,31 @@
         <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
           <div class="field-group">
             <label class="search-form-label" for="date-of-arrival">Дата Заезда:</label>
-            <input class="field field-date" id="date-of-arrival" name="date-of-arrival" type="text" value="27 апреля 2020">
-            <span class="calendar"></span>
+            <div class="calendar-wrapper">
+              <input class="field field-date" id="date-of-arrival" name="date-of-arrival" type="text" value="27 апреля 2020">
+              <button class="field-button-calendar">
+                <span class="visually-hidden">Выбрать дату на календаре.</span>
+                <svg  class="calendar-icon" aria-hidden="true" focusable="false" width="15" height="15" viewBox="0 0 15 15" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 10c.3 0 .5-.2.5-.5S5.8 9 5.5 9s-.5.2-.5.5.2.5.5.5Z"/>
+                  <path d="M14 2h-2V0h-1v2H4V0H3v2H1c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h13c.5 0 1-.5 1-1V3c0-.6-.5-1-1-1Zm0 12H1V7h13v7ZM1 6V3h2v2h1V3h7v2h1V3h2v3H1Z"/>
+                  <path d="M7.5 10c.3 0 .5-.2.5-.5S7.8 9 7.5 9s-.5.2-.5.5.2.5.5.5ZM9.5 10c.3 0 .5-.2.5-.5S9.8 9 9.5 9s-.5.2-.5.5.2.5.5.5ZM5.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM3.5 10c.3 0 .5-.2.5-.5S3.8 9 3.5 9s-.5.2-.5.5.2.5.5.5ZM3.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM7.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM9.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM11.5 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM11.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z"/>
+                </svg>
+              </button>
+            </div>
           </div>
           <div class="field-group">
             <label class="search-form-label" for="date-of-departure">Дата Выезда:</label>
-            <input class="field field-date" id="date-of-departure" name="date-of-departure" type="text" value="1 сентября 2021">
-            <span class="calendar"></span>
+            <div class="calendar-wrapper">
+              <input class="field field-date" id="date-of-departure" name="date-of-departure" type="text" value="1 сентября 2021">
+              <button class="field-button-calendar">
+                <span class="visually-hidden">Выбрать дату на календаре.</span>
+                <svg  class="calendar-icon" aria-hidden="true" focusable="false" width="15" height="15" viewBox="0 0 15 15" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 10c.3 0 .5-.2.5-.5S5.8 9 5.5 9s-.5.2-.5.5.2.5.5.5Z"/>
+                  <path d="M14 2h-2V0h-1v2H4V0H3v2H1c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h13c.5 0 1-.5 1-1V3c0-.6-.5-1-1-1Zm0 12H1V7h13v7ZM1 6V3h2v2h1V3h7v2h1V3h2v3H1Z"/>
+                  <path d="M7.5 10c.3 0 .5-.2.5-.5S7.8 9 7.5 9s-.5.2-.5.5.2.5.5.5ZM9.5 10c.3 0 .5-.2.5-.5S9.8 9 9.5 9s-.5.2-.5.5.2.5.5.5ZM5.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM3.5 10c.3 0 .5-.2.5-.5S3.8 9 3.5 9s-.5.2-.5.5.2.5.5.5ZM3.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM7.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM9.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM11.5 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM11.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z"/>
+                </svg>
+              </button>
+            </div>
           </div>
           <div class="field-group">
             <label class="search-form-label" for="number-of-adults">Взрослые:</label>
