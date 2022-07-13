@@ -451,8 +451,13 @@ body {
   box-sizing: border-box;
 }
 
+.features-item:nth-child(3) .features-description {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 .features-item:not(.wide) {
-  padding: 20px;
+  padding: 80px 85px 81px 85px;
 }
 
 .wide {
@@ -476,6 +481,7 @@ body {
 .features-description {
   margin: 0;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .features-description:last-child {
