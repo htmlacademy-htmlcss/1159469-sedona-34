@@ -221,6 +221,15 @@ body {
   z-index: 1;
 }
 
+.navigation-logo:hover,
+.navigation-logo:focus {
+  opacity: 0.8;
+}
+
+.navigation-logo:active {
+  opacity: 0.3;
+}
+
 .main-header-logo {
   margin: 0;
   padding: 0;
@@ -246,6 +255,15 @@ body {
   position: relative;
 }
 
+.navigation-link:hover,
+.navigation-link:focus {
+  color: #756157;
+}
+
+.navigation-link:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .navigation-link-current::before {
   content: "";
   position: absolute;
@@ -262,30 +280,27 @@ body {
   margin-left: auto;
 }
 
-.navigation-user .navigation-link:not(:last-child) {
-  min-width: 16px;
-  min-height: 22px;
+.navigation-user .navigation-link {
+  min-width: 42px;
+  position: relative;
+  padding: 33px 0 32px 0;
 }
 
-.navigation-user .navigation-item:nth-child(1) .navigation-link {
-  background-image: url(../images/search.svg);
-  background-repeat: no-repeat;
-  background-size: 20px auto;
-  background-position: center;
-  box-sizing: border-box;
-  width: 42px;
-  height: 65px;
+.navigation-user-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 19px;
+  transform: translate(-50%, -50%);
 }
 
-.navigation-user .navigation-item:nth-child(2) .navigation-link {
-  background-image: url(../images/favorite.svg);
-  background-repeat: no-repeat;
-  background-size: 20px auto;
-  background-position: center;
-  box-sizing: border-box;
-  width: 42px;
-  height: 65px;
-  margin-right: 20px;
+.navigation-user .navigation-link:hover .navigation-user-icon,
+.navigation-user .navigation-link:focus .navigation-user-icon {
+  fill: #756157;
+}
+
+.navigation-user .navigation-link:active .navigation-user-icon {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 .navigation-button {
@@ -330,6 +345,7 @@ body {
 
 .popover-wrapper {
   position: relative;
+  margin-right: 20px;
 }
 
 .popover {
@@ -349,6 +365,7 @@ body {
   font-family: inherit;
   font-size: 10px;
   line-height: 13px;
+  letter-spacing: -0.1em;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -1305,9 +1322,7 @@ body {
   z-index: -1;
 }
 
-/* Скрывает модальное окно */
-
-.modal-container-close {
+.modal-container-close { /* Скрывает модальное окно */
   display: none;
 }
 
