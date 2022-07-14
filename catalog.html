@@ -16,7 +16,7 @@
         <a class="navigation-logo" href="index.html">
           <img class="main-header-logo" src="images/logo-sedona.svg" width="139" height="70" alt="Логотип City of Sedona.">
         </a>
-        <ul class="navigation-list">
+        <ul class="navigation-list navigation-pages">
           <li class="navigation-item">
             <a class="navigation-link" href="index.html">Главная</a>
           </li>
@@ -146,10 +146,10 @@
                   </div>
                   <div class="range-scale">
                     <div class="range-bar" style="left: 0; width: 227px">
-                      <button class="range-toggle toggle-min">
+                      <button class="range-toggle toggle-min" type="button">
                         <span class="visually-hidden">Изменить минимальную цену.</span>
                       </button>
-                      <button class="range-toggle toggle-max">
+                      <button class="range-toggle toggle-max" type="button">
                         <span class="visually-hidden">Изменить максимальную цену.</span>
                       </button>
                     </div>
@@ -180,12 +180,21 @@
             <div class="sorting-view">
               <a class="sorting-view-item button-sort button-sort-current" href="#">
                 <span class="visually-hidden">Показать карточками.</span>
+                <svg class="sorting-view-icon" aria-hidden="true" focusable="false" width="16" height="14" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 0H0v6h4V0Zm12 0h-4v6h4V0Zm-6 0H6v6h4V0ZM4 8H0v6h4V8Zm12 0h-4v6h4V8Zm-6 0H6v6h4V8Z"/>
+                </svg>
               </a>
               <a class="sorting-view-item button-sort" href="#">
                 <span class="visually-hidden">Показать слайд-шоу.</span>
+                <svg class="sorting-view-icon" aria-hidden="true" focusable="false" width="16" height="14" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 12H0v2h16v-2ZM14 2v6H2V2h12Zm2-2H0v10h16V0Z"/>
+                </svg>
               </a>
               <a class="sorting-view-item button-sort" href="#">
                 <span class="visually-hidden">Показать списком.</span>
+                <svg class="sorting-view-icon" aria-hidden="true" focusable="false" width="16" height="14" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 0H0v2h2V0Zm14 0H4v2h12V0ZM2 4H0v2h2V4Zm14 0H4v2h12V4ZM2 8H0v2h2V8Zm14 0H4v2h12V8ZM2 12H0v2h2v-2Zm14 0H4v2h12v-2Z"/>
+                </svg>
               </a>
             </div>
           </div>
@@ -294,7 +303,7 @@
         <p class="subscription-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
         <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="subscription-mail">Введите e-mail для подписки.</label>
-          <input class="subscription-mail" id="subscription-mail" type="email" name="subscription-email" placeholder="Ваш e-mail">
+          <input class="subscription-mail" id="subscription-mail" type="email" name="subscription-email" placeholder="Ваш e-mail" required>
           <button class="subscription-button button button-second" type="submit">Подписаться</button>
         </form>
       </section>
