@@ -622,8 +622,8 @@ img {
   box-shadow: inset 0 0 0 3px #83b3d3;
 }
 
-.subscription-mail:active {
-  background-color: #e6e6e6;
+.subscription-mail:not(:placeholder-shown){
+  background-color: #ffffff;
   box-shadow: inset 0 0 0 3px #83b3d3;
 }
 
@@ -999,6 +999,10 @@ img {
   appearance: textfield;
 }
 
+.filter-price-input::placeholder {
+  color: #ffffff;
+}
+
 .filter-price-input:hover {
   border-color: rgba(255, 255, 255, 0.6);
 }
@@ -1009,7 +1013,7 @@ img {
   outline: none;
 }
 
-.filter-price-input:active {
+.filter-price-input:not(:placeholder-shown) {
   background-color: #756257;
 }
 
@@ -1519,7 +1523,7 @@ img {
   outline: 3px solid #83b3d3;
 }
 
-.field:active {
+.field:not(:placeholder-shown) {
   box-shadow: inset 0 0 0 2px #000000;
   background-color: #ffffff;
   color: #000000;
